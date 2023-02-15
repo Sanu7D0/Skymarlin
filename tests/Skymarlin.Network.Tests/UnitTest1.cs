@@ -1,4 +1,4 @@
-namespace Skymarlin.Core.Tests;
+namespace Skymarlin.Network.Tests;
 
 public class Tests
 {
