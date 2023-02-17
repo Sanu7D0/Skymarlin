@@ -1,10 +1,16 @@
-﻿using System.Net;
+﻿using System.Buffers;
+using System.Net;
+using Skymarlin.Utils;
 
 namespace Skymarlin.Network;
 
 public interface IConnection : IDisposable
 {
-    bool Connected { get; }
+    event AsyncEventHandler<ReadOnlySequence<byte>>? PacketReceived;
+
+    event AsyncEventHandler? Disconnected;
+    
+    // bool Connected { get; }
     
     EndPoint? EndPoint { get; }
 
