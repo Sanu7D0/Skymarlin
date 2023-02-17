@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PacketDefinitions>
+    <Description>This file contains all packet definitions for packets which are sent from the chat server to the game client.</Description>
+    <Packets>
+    </Packets>
+</PacketDefinitions>

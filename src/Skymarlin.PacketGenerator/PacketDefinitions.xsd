@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns:sky="urn:Skymarlin"
+           targetNamespace="urn:Skymarlin"
+           xmlns="urn:Skymarlin"
+           elementFormDefault="qualified">
+    <xs:element name="PacketDefinitions">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="1" name="Description" type="xs:string" />
+                <xs:element minOccurs="1" maxOccurs="1" name="Packets" type="sky:PacketArray" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:complexType name="PacketArray">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="Packet" type="sky:Packet" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="Packet">
+        <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="Name" type="xs:Name" /> 
+            <xs:element minOccurs="1" maxOccurs="1" name="Code" type="xs:string" /> 
+            <xs:element minOccurs="1" maxOccurs="1" name="Description" type="xs:string" /> 
+            <xs:element minOccurs="1" maxOccurs="1" name="Reaction" type="xs:string" /> 
+            <xs:element minOccurs="1" maxOccurs="1" name="HeaderType" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="Length" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="Fields" type="sky:FieldArray" /> 
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="FieldArray">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="Field" type="sky:Field" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="Field">
+        <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="Type" type="sky:FieldType"/>
+            <xs:element minOccurs="1" maxOccurs="1" name="Name" type="xs:Name"/>
+            <xs:element minOccurs="0" maxOccurs="1" name="Description" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="FieldType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Bool" />
+            <xs:enumeration value="Byte" />
+            <xs:enumeration value="Short" />
+            <xs:enumeration value="Int" />
+            <xs:enumeration value="Long" />
+            <xs:enumeration value="Float" />
+            <xs:enumeration value="Double" />
+            <xs:enumeration value="String" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
