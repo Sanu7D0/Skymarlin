@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Packets xmlns="urn:Skymarlin">
+    <Packet>
+        <Name>ChatMessage</Name>
+        <Description>A chat message from the game client to the current chat room.</Description>
+        <Reaction>The server broadcast the chat message the the current chat room.</Reaction>
+        <Code>01</Code>
+        <HeaderType>C1</HeaderType>
+        <Fields>
+            <Field>
+                <Name>SenderId</Name>
+                <Type>Byte</Type>
+            </Field>
+            <Field>
+                <Name>Message</Name>
+                <Description>blahblah</Description>
+                <Type>String</Type>
+            </Field>
+        </Fields>
+    </Packet>
+
+    <Packet>
+        <Name>ChatClient</Name>
+        <Description>Blahblah.</Description>
+        <Reaction>BlahBlah2.</Reaction>
+        <Code>02</Code>
+        <HeaderType>C1</HeaderType>
+        <Fields>
+            <Field>
+                <Name>Id</Name>
+                <Type>UInt32</Type>
+            </Field>
+        </Fields>
+    </Packet>
+</Packets>

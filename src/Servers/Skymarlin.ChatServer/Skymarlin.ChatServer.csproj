@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Core\Skymarlin.Network.Packet\Skymarlin.Network.Packet.csproj" />
+      <ProjectReference Include="..\..\Core\Skymarlin.Network\Skymarlin.Network.csproj" />
+    </ItemGroup>
+    
+    <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+        <XslTransformation OutputPaths="Packets\ClientPackets.cs" XmlInputPaths="Packets\ClientPackets.xml" XslInputPath="..\..\Core\Skymarlin.Network.Packet\GeneratePacketStructs.xslt" Parameters="&lt;Parameter Name='namespace' Value='Skymarlin.ChatServer.Packets'/&gt;" />
+        
+        <XslTransformation OutputPaths="Packets\ConnectionExtensions.cs" XmlInputPaths="Packets\ClientPackets.xml" XslInputPath="..\..\Core\Skymarlin.Network.Packet\GenerateConnectionExtensions.xslt" Parameters="&lt;Parameter Name='namespace' Value='Skymarlin.ChatServer.Packets'/&gt;" />
+    </Target>
+
+</Project>

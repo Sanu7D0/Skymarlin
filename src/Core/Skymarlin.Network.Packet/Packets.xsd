@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns:sky="urn:Skymarlin"
+           targetNamespace="urn:Skymarlin"
+           xmlns="urn:Skymarlin"
+           elementFormDefault="qualified">
+    
+    <xs:element name="Packets" type="sky:PacketArray" />
+    
+    <xs:complexType name="PacketArray">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="Packet" type="sky:Packet" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="Packet">
+        <xs:sequence>
+            <xs:element name="Name" type="xs:Name" /> 
+            <xs:element name="Description" type="xs:string" /> 
+            <xs:element name="Reaction" type="xs:string" /> 
+            <xs:element name="Code" type="xs:string" /> 
+            <xs:element name="HeaderType" type="xs:string" />
+            <xs:element name="Fields" type="sky:FieldArray" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="Field">
+        <xs:sequence>
+            <xs:element name="Name" type="xs:Name"/>
+            <xs:element minOccurs="0" name="Description" type="xs:string" />
+            <xs:element name="Type" type="sky:FieldType"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="FieldArray">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="Field" type="sky:Field" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="FieldType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Boolean" />
+            <xs:enumeration value="Byte" />
+            <xs:enumeration value="UInt16" />
+            <xs:enumeration value="UInt32" />
+            <xs:enumeration value="UInt64" />
+            <xs:enumeration value="Single" />
+            <xs:enumeration value="Double" />
+            <xs:enumeration value="String" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

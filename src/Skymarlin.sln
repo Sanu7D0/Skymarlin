@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{B8CA5A95-5FB2-48E5-AAF7-00A573C7CF38}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Servers", "Servers", "{0376D20A-2129-4B9A-A95D-BB240818AC53}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{CD711C54-314C-47AD-9DDA-135372C8459C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skymarlin.Network", "Core\Skymarlin.Network\Skymarlin.Network.csproj", "{2D3E3184-1FBB-4FF8-9039-5E96B0166366}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skymarlin.Network.Packet", "Core\Skymarlin.Network.Packet\Skymarlin.Network.Packet.csproj", "{565395E3-FCCC-45DA-B19A-E1CF42CBAF28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skymarlin.Utils", "Core\Skymarlin.Utils\Skymarlin.Utils.csproj", "{3A59D6D8-1D0E-4846-AFBE-505B9FB7FEDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skymarlin.Network.Tests", "..\tests\Skymarlin.Network.Tests\Skymarlin.Network.Tests.csproj", "{2A51E55A-2C57-43AE-871B-BE01A66D5A40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skymarlin.ChatServer", "Servers\Skymarlin.ChatServer\Skymarlin.ChatServer.csproj", "{3B0F694D-0C0B-41A8-B682-5756FE8DF372}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2D3E3184-1FBB-4FF8-9039-5E96B0166366} = {B8CA5A95-5FB2-48E5-AAF7-00A573C7CF38}
+		{565395E3-FCCC-45DA-B19A-E1CF42CBAF28} = {B8CA5A95-5FB2-48E5-AAF7-00A573C7CF38}
+		{3A59D6D8-1D0E-4846-AFBE-505B9FB7FEDD} = {B8CA5A95-5FB2-48E5-AAF7-00A573C7CF38}
+		{2A51E55A-2C57-43AE-871B-BE01A66D5A40} = {CD711C54-314C-47AD-9DDA-135372C8459C}
+		{3B0F694D-0C0B-41A8-B682-5756FE8DF372} = {0376D20A-2129-4B9A-A95D-BB240818AC53}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D3E3184-1FBB-4FF8-9039-5E96B0166366}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D3E3184-1FBB-4FF8-9039-5E96B0166366}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D3E3184-1FBB-4FF8-9039-5E96B0166366}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D3E3184-1FBB-4FF8-9039-5E96B0166366}.Release|Any CPU.Build.0 = Release|Any CPU
+		{565395E3-FCCC-45DA-B19A-E1CF42CBAF28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{565395E3-FCCC-45DA-B19A-E1CF42CBAF28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{565395E3-FCCC-45DA-B19A-E1CF42CBAF28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{565395E3-FCCC-45DA-B19A-E1CF42CBAF28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A59D6D8-1D0E-4846-AFBE-505B9FB7FEDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A59D6D8-1D0E-4846-AFBE-505B9FB7FEDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A59D6D8-1D0E-4846-AFBE-505B9FB7FEDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A59D6D8-1D0E-4846-AFBE-505B9FB7FEDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A51E55A-2C57-43AE-871B-BE01A66D5A40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A51E55A-2C57-43AE-871B-BE01A66D5A40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A51E55A-2C57-43AE-871B-BE01A66D5A40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A51E55A-2C57-43AE-871B-BE01A66D5A40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B0F694D-0C0B-41A8-B682-5756FE8DF372}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B0F694D-0C0B-41A8-B682-5756FE8DF372}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B0F694D-0C0B-41A8-B682-5756FE8DF372}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B0F694D-0C0B-41A8-B682-5756FE8DF372}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

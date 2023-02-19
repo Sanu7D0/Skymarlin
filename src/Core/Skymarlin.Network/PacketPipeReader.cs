@@ -1,5 +1,6 @@
 ﻿using System.Buffers;
 using System.IO.Pipelines;
+using Skymarlin.Network.Packet;
 
 namespace Skymarlin.Network;
 
@@ -49,7 +50,7 @@ public abstract class PacketPipeReader
             if (buffer.Length > 2)
             {
                 buffer.Slice(0, 3).CopyTo(_headerBuffer);
-                length = _headerBuffer.AsSpan().GetPacketSize();
+                length = _headerBuffer.GetPacketSize();
 
                 if (length == 0)
                 {

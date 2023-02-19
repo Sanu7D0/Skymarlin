@@ -27,9 +27,9 @@ public class InvalidPacketHeaderException : Exception
     {
         var stringBuilder = new StringBuilder();
         stringBuilder
-            .Append("The packet header is invalid: ").AppendLine(Header.AsString())
+            .Append("The packet header is invalid: ").AppendLine(BitConverter.ToString(Header))
             .Append("Buffer position: ").AppendLine(Position.ToString())
-            .Append("Buffer content: ").AppendLine(BufferContent.AsString());
+            .Append("Buffer content: ").AppendLine(BitConverter.ToString(BufferContent));
         return stringBuilder.ToString();
     }
 }

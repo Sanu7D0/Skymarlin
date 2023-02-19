@@ -1,4 +1,5 @@
 ﻿using System.Buffers;
+using System.IO.Pipelines;
 using System.Net;
 using Skymarlin.Utils;
 
@@ -13,6 +14,8 @@ public interface IConnection : IDisposable
     // bool Connected { get; }
     
     EndPoint? EndPoint { get; }
+
+    PipeWriter Output { get; }
 
     Task BeginReceiveAsync();
 
