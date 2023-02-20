@@ -27,8 +27,8 @@
     <xs:complexType name="Field">
         <xs:sequence>
             <xs:element name="Name" type="xs:Name"/>
-            <xs:element minOccurs="0" name="Description" type="xs:string" />
             <xs:element name="Type" type="sky:FieldType"/>
+            <xs:element minOccurs="0" name="Description" type="xs:string" />
         </xs:sequence>
     </xs:complexType>
     

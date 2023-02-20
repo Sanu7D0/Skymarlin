@@ -24,32 +24,32 @@ public static class SpanExtensions
         return packet.AsSpan().GetPacketSize();
     }
     
-    public static bool ReadBoolean(this ReadOnlySpan<byte> span)
+    public static bool ReadBoolean(this Span<byte> span)
     {
         return BitConverter.ToBoolean(span);
     }
     
-    public static ushort ReadUInt16(this ReadOnlySpan<byte> span)
+    public static ushort ReadUInt16(this Span<byte> span)
     {
         return BitConverter.ToUInt16(span);
     }
         
-    public static uint ReadUInt32(this ReadOnlySpan<byte> span)
+    public static uint ReadUInt32(this Span<byte> span)
     {
         return BitConverter.ToUInt32(span);
     }
         
-    public static float ReadSingle(this ReadOnlySpan<byte> span)
+    public static float ReadSingle(this Span<byte> span)
     {
         return BitConverter.ToSingle(span);
     }
     
-    public static double ReadDouble(this ReadOnlySpan<byte> span)
+    public static double ReadDouble(this Span<byte> span)
     {
         return BitConverter.ToDouble(span);
     }
         
-    public static string ReadString(this ReadOnlySpan<byte> span)
+    public static string ReadString(this Span<byte> span)
     {
         ushort length = span.ReadUInt16();
         string str = Encoding.UTF8.GetString(span[sizeof(ushort)..(sizeof(ushort) + length)]);

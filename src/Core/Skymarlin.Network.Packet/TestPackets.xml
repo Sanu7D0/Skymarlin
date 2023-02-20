@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Packets xmlns="urn:Skymarlin">
     <Packet>
-        <Name>ChatMessage</Name>
-        <Description>A chat message from the game client to the current chat room.</Description>
-        <Reaction>The server broadcast the chat message the the current chat room.</Reaction>
+        <Name>TestPacket0</Name>
+        <Description>Test packet 0 description.</Description>
+        <Reaction>Test pacekt 0 reaction</Reaction>
         <Code>01</Code>
         <HeaderType>A1</HeaderType>
         <Fields>
@@ -20,7 +20,7 @@
     </Packet>
 
     <Packet>
-        <Name>ChatClient</Name>
+        <Name>TestPacket1</Name>
         <Description>Blahblah.</Description>
         <Reaction>BlahBlah2.</Reaction>
         <Code>02</Code>
@@ -29,6 +29,18 @@
             <Field>
                 <Name>Id</Name>
                 <Type>UInt32</Type>
+            </Field>
+            <Field>
+                <Name>aaa</Name>
+                <Type>UInt32</Type>
+            </Field>
+            <Field>
+                <Name>bbbHeee</Name>
+                <Type>UInt64</Type>
+            </Field>
+            <Field>
+                <Name>bbbAaa</Name>
+                <Type>String</Type>
             </Field>
         </Fields>
     </Packet>
